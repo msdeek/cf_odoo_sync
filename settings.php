@@ -36,6 +36,21 @@ if ($ADMIN->fulltree) {
         get_string('odoopassword_desc', 'local_cf_odoo_sync'),
         ''));
 
+    // Add a custom HTML element to display the button
+$button = '<div id="test-connection-button" class="form-group row">
+<div class="col-md-3 offset-md-3">
+    <button type="button" class="btn btn-secondary">' . get_string('test_connection', 'local_cf_odoo_sync') . '</button>
+</div>
+</div>';
+$settings->add(new admin_setting_heading('test_connection_heading', '', $button));
+
+// Add JavaScript to handle the button click event and perform the AJAX call
+$PAGE->requires->js(new moodle_url('/local/cf_odoo_sync/amd/src/init_test_connection_button.js'));
+
+
     // Add the plugin settings page to the administration tree
     $ADMIN->add('localplugins', $settings);
+
+    
+
 }
