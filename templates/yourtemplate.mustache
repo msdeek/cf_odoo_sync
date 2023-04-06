@@ -1,0 +1,15 @@
+<div class="odoo-sync">
+  <h2>{{plugin_name}} Settings</h2>
+  <form method="post" action="{{form_action}}">
+    <input type="hidden" name="sesskey" value="{{sesskey}}" />
+    <label for="odoo-url">Odoo URL:</label>
+    <input type="text" name="odoo_url" value="{{odoo_url}}" /><br />
+    <label for="odoo-db">Odoo Database:</label>
+    <input type="text" name="odoo_db" value="{{odoo_db}}" /><br />
+    <label for="odoo-user">Odoo Username:</label>
+    <input type="text" name="odoo_user" value="{{odoo_user}}" /><br />
+    <label for="odoo-password">Odoo Password:</label>
+    <input type="password" name="odoo_password" value="{{odoo_password}}" /><br />
+    <input type="submit" name="submit" value="Save Settings" />
+  </form>
+</div>
